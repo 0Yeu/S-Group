@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OYeu</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 5;
+            background-color: #FFF;
+            padding: 20px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo{
+            text-transform: uppercase;
+            font-size: 18px;
+            letter-spacing: 3px;
+            margin-left: 50px;
+            display: flex;
+            color: black;
+            align-items: center;
+        }
+
+        .logo span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            color: azure;
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            font-size: 22px;
+            font-weight: 600;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        .social {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-right: 50px;
+        }
+
+        .social li {
+            margin-left: 12px;
+        }
+
+        .social li a {
+            border-radius: 100%;
+            color: #FFF;
+            width: 24px;
+            height: 24px;
+            background-color: #F26464;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        img {
+            max-width:100%;
+            border: none;
+            outline: none;
+            height: auto;
+            margin-left: 50px;
+        }
+
+        .banner section {
+            padding-left: 70px;
+            padding-right: 100px;
+        }
+
+        .banner section h1 {
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 60px;
+            color: black;
+        }
+
+        .banner section h1 span {
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+            font-size: 16px;
+            padding-bottom: 30px;
+        }
+
+        .numbervalulist {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            margin-top: 60px;
+        }
+
+        .numbervalulist li {
+            margin-right: 60px;
+        }
+
+        .numbervalulist strong {
+            display: block;
+            color: #F26464;
+            font-size: 36px;
+            font-weight: 800;
+        }
+
+        .numbervalulist span {
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        .about-section {
+            padding-top: 60px;
+            padding-bottom: 120px;
+        }
+
+        .heading {
+            display: inline-block;
+            font-weight: 700;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 16px;
+            border-bottom: 3px solid #F26464;
+            padding-bottom: 7px;
+            margin-bottom: 23px;
+        }
+
+        .about-section p {
+            color: #373737;
+            font-size: 24px;
+            line-height: 40px;
+            font-weight: 300;
+            margin-bottom: 60px;
+        }
+
+        .button {
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 12px;
+            line-height: 13px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: #F26464;
+            padding: 17px 30px;
+            border: 2px solid #F26464;
+            border-radius: 60px;
+        }
+
+        .footer {
+            background-color: black;
+            padding: 120px 0;
+        }
+
+        .footer section {
+            padding-bottom: 97px;
+        }
+
+        .footer section span {
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 1px;
+            display: block;
+            padding-bottom: 20px;
+        }
+
+        .footer section h4 {
+            color: #FFF;
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        .footer section p {
+            letter-spacing: 1.13px;
+            color: #FFF;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .button {
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 12px;
+            line-height: 13px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: #F26464;
+            padding: 17px 30px;
+            border: 2px solid #F26464;
+            border-radius: 60px;
+        }
+
+        .copyright {
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 1px;
+            font-size: 16px;
+        }
+
+        .heading {
+            display: inline-block;
+            font-weight: 700;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 16px;
+            border-bottom: 3px solid #F26464;
+            padding-bottom: 7px;
+            margin-bottom: 23px;
+        }
+
+        .work-section {
+            padding-bottom: 80px;
+        }
+
+        .work-list {
+            padding-left: 70px;
+            padding-top: 40px;
+            padding-right: 70px;
+            background-color: #F6F8FA;
+            margin-bottom: 40px;
+        }
+
+    </style>
+</head>
+<body>
+   
+    <header class="header " >
+        <div class="container">
+            <div class="header-inner">
+              <a href="index.html" class="logo">
+                <span>J</span>Jason Stroff
+              </a>
+              <ul class="social">
+                <li><a href="#" target="_blank"><i class="ri-github-fill"></i></a></li>
+                <li><a href="#" target="_blank"><i class="ri-stack-overflow-line"></i></a></li>
+                <li><a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
+              </ul>
+            </div>
+        </div>
+    </header>
+    
+    <div class="banner" style="margin-top: 100px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12"></div>
+                <div class="col-md-5">
+                    <img src="assets/images/profile-image.jpg">
+                </div>
+                <div class="col-md-7">
+                    <section>
+                        <h1>
+                            <span>HI THERE</span>
+                            I’m Jason Stroff <br> UI/UX DESIGNER + DEVELOPER based in Florida.
+                        </h1>
+                        <ul class="numbervalulist">
+                            <li>
+                                <strong>6+</strong>
+                                <span>Experience</span>
+                            </li>
+                            <li>
+                                <strong>89</strong>
+                                <span>Projects</span>
+                            </li>
+                            <li>
+                                <strong>52</strong>
+                                <span>Happy Clients</span>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-section">
+        <div class="container">
+            <section>
+                <h2 class="heading">About Me</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus mollitia tempore numquam minus sequi sit amet omnis culpa. Maxime, ex? Molestiae corrupti culpa officia facilis necessitatibus debitis ipsam, amet atque.</p>
+                <div class="button-sec text-center">
+                    <a href="#" class="button">Download Resume</a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="skills-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12"></div>
+                <div class="col-md-6">
+                    <h2 class="heading">Core Skills</h2>
+                    <ul class="skills-list">
+                        <li>JavaScript</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>MongoDB</li>
+                        <li>Vue.js</li>
+                        <li>React</li>
+                        <li>Sequelize</li>
+                        <li>Github</li>
+                        <li>HTML</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="heading">Other Skills</h2>
+                    <ul class="skills-list">
+                        <li>Storyblok</li>
+                        <li>PWAs</li>
+                        <li>Responsive Web Design</li>
+                        <li>React</li>
+                        <li>Vuetify</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <div class="experience-section">
+        <div class="container">
+            <h2 class="heading">Work Experience</h2>
+            <div class="row experience-list">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <section>
+                        <span class="year">2019 - Present</span>
+                        <h3 class="officename">Matrix Media Inc</h3>
+                        <span class="department">Full Stack developer</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum.</p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, tenetur!</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, voluptates!</li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <section>
+                        <span class="year">2018 - 2019</span>
+                        <h3 class="officename">Lexind</h3>
+                        <span class="department">Senior app developer</span>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita dolore totam dignissimos cumque explicabo sed perspiciatis obcaecati, deserunt ex amet officia eaque soluta eos cum laborum rem fugiat? Deserunt, iure?</p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur minus sed praesentium atque ipsam. Vel?</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime labore laudantium iste.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ex quisquam autem sapiente reiciendis?</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+   </div>
+
+   <div class="work-section">
+        <div class="container">
+            <h2 class="heading">Latest works</h2>
+            <div class="work-list-section">
+                <div class="work-list">
+                    <div class="row">
+                        <div class="col-md-12"></div>
+                        <div class="col-md-7">
+                            <section>
+                                <h3 class="work-tilte">Tripy mobile app</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem vitae cupiditate mollitia perspiciatis a totam quae eveniet praesentium delectus dignissimos.</p>
+                                <a href="#" class="button">Details</a>
+                            </section>
+                        </div>
+                        <div class="col-md-5">
+                            <figure><img src="assets/images/2.jpg"></figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-list">
+                    <div class="row">
+                        <div class="col-md-12"></div>
+                        <div class="col-md-7">
+                            <section>
+                            <h3 class="work-tilte">Hello mobile app</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae obcaecati accusamus explicabo et fugiat accusantium excepturi! Nulla suscipit accusantium nobis?</p>
+                            <a href="#" class="button">Details</a>
+                            </section>
+                        </div>
+                        <div class="col-md-5">
+                        <figure><img src="assets/images/3.jpg"></figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-list">
+                    <div class="row">
+                        <div class="col-md-12"></div>
+                        <div class="col-md-7">
+                            <section>
+                            <h3 class="work-tilte">Cute cookies app</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales. </p>
+                            <a href="#" class="button">Details</a>
+                            </section>
+                        </div>
+                        <div class="col-md-5">
+                        <figure><img src="assets/images/4.jpg"></figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+
+   <footer class="footer text-center">
+        <div class="container">
+            <section>
+                <span>Stay in touch</span>
+                <h4>Ready to talk?</h4>
+                <p>Feel free to contact us</p>
+                <a href="#" class="button">Lets Talk</a>
+            </section>
+            <span class="copyright">© 2022 All rights reserved. Free minimal bootstrap template by <a href="#" target="_blank">Designstub</a>.</span>
+        </div>
+   </footer>
+  
+</body>
+</html>
